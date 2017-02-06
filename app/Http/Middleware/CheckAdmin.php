@@ -16,7 +16,9 @@ class CheckAdmin
     public function handle($request, Closure $next)
     {
         if (Sentinel::inRole('admin'))
+        {
             return $next($request);         
+        }
         return redirect('/');
     }
 }

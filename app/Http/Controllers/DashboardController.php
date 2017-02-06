@@ -15,12 +15,25 @@ class DashboardController extends Controller
 
     public function updateProfile(Request $request)
     {
-    	$credentials = [
-			'name' => $request->name,
-			'mobile' => $request->mobile,
-            'accommodation' => $request->accommodation,
-		];
-        
+        $this->validate($request, [
+            'name' => 'required|max:255|',
+            'mobile' => 'required|max:10|min:10|digits:10',
+        ]);
+        if($request->accommodation != '')
+        {
+            $credentials = [
+                'name' => $request->name,
+                'mobile' => $request->mobile,
+                'accommodation' => $request->accommodation,
+            ];
+        }
+        else
+        {
+            $credentials = [
+                'name' => $request->name,
+                'mobile' => $request->mobile,
+            ];
+        }
 		$user = Sentinel::check();
 		if(Sentinel::update($user, $credentials))
 		{

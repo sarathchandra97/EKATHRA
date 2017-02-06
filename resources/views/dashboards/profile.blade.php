@@ -7,7 +7,7 @@
     <!-- Update  Profile-->
     <div class="row">
         <div class="col s12 l6">
-            <div class="card teal lighten-5">
+            <div class="card amber lighten-5">
                 <div class="card-content">
                     <div class="header center">
                         <h4 class="title">Details</h4>
@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col s12 l8 offset-l2">
                             <div class="form-group">
-                                <label>Email Address</label>
+                                <p>Email Address</p>
                                 <p>{{ $user->email }}</p>
                                 <hr>
                             </div>
@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col s12 l8 offset-l2">
                             <div class="form-group">
-                                <label>College</label>
+                                <p>College</p>
                                 <p>{{ $user->college }}</p>
                                 <hr>
                             </div>
@@ -33,7 +33,16 @@
                     <div class="row">
                         <div class="col s12 l8 offset-l2">
                             <div class="form-group">
-                                <label>V id</label>
+                                <p>Mobile Number</p>
+                                <p class="form-control">{{ $user->mobile }}</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 l8 offset-l2">
+                            <div class="form-group">
+                                <p>Unique id</p>
                                 <p class="form-control">{{ $user->hash }}</p>
                                 <hr>
                             </div>
@@ -42,7 +51,7 @@
                     <div class="row">
                         <div class="col s12 l8 offset-l2">
                             <div class="form-group">
-                                <label>Accommodation choice</label>
+                                <p>Accommodation choice</p>
                                 <p class="form-control">{{ $user->accommodation }}</p>
                                 <hr>
                             </div>
@@ -63,7 +72,7 @@
                             <div class="col s12 l8 offset-l2">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" value="{{ $user->name }}" name="name">
+                                    <input type="text" class="form-control" value="{{ $user->name }}" name="name" required>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +80,7 @@
                             <div class="col s12 l8 offset-l2">
                                 <div class="form-group">
                                     <label>Mobile Number</label>
-                                    <input type="text" class="form-control" value="{{ $user->mobile }}" name="mobile">
+                                    <input type="text" class="form-control" value="{{ $user->mobile }}" name="mobile" required>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +88,8 @@
                             <div class="col s12 l8 offset-l2">
                                 <div class="form-group">
                                     <label>Change Accommodation Option</label>
-                                    <select name="accommodation" required>
+                                    <select name="accommodation">
+                                        <option selected disabled>Select your option</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -107,7 +117,7 @@
                             <div class="col s12 l8 offset-l2">
                                 <div class="form-group">
                                     <label>Current Password</label>
-                                    <input type="password" class="form-control" name="old_password">
+                                    <input type="password" class="form-control" name="old_password" required>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +125,7 @@
                             <div class="col s12 l8 offset-l2">
                                 <div class="form-group">
                                     <label>New Password</label>
-                                    <input type="password" class="form-control" name="password">
+                                    <input type="password" class="form-control" name="password" required>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +133,7 @@
                             <div class="col s12 l8 offset-l2">
                                 <div class="form-group">
                                     <label>Confirm Password</label>
-                                    <input type="password" class="form-control" name="password_confirmation">
+                                    <input type="password" class="form-control" name="password_confirmation" required>
                                 </div>
                             </div>
                         </div>

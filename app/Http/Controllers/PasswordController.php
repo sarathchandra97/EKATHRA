@@ -55,7 +55,7 @@ class PasswordController extends Controller
     public function getRequest()
     {
     	//return view to enter email to get password reset link
-    	return view('forgotpassword.forgotpassword');
+    	return view('forgotpassword.requestpassword');
 
     }
 

@@ -18,6 +18,7 @@ Route::get('contactus', 'PagesController@getContact');
 Route::post('contactus','PagesController@postContact');
 Route::get('events', 'PagesController@events');
 Route::get('workshops', 'PagesController@workshops');
+Route::get('culturals', 'PagesController@culturals');
 Route::get('event/{slug}', 'PagesController@event');
 Route::get('2016', 'PagesController@vivaan2016');
 Route::get('sign-out', 'AuthController@logout');

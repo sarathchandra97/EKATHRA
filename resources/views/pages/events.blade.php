@@ -5,10 +5,10 @@
 @section('content')
 <div class="container">
 	<div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/sample-1.jpg">
+              <img src="img/background3.jpg">
               <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
@@ -16,14 +16,14 @@
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light teal lighten-1"> View Details</a>
+              <a href="#" class="btn waves-effect waves-light "> View Details</a>
             </div>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/sample-1.jpg">
+              <img src="img/background2.jpg">
               <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
@@ -31,14 +31,14 @@
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light teal lighten-1"> View Details</a>
+              <a href="#" class="btn waves-effect waves-light "> View Details</a>
             </div>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/sample-1.jpg">
+              <img src="img/background1.jpg">
               <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
@@ -46,7 +46,7 @@
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light teal lighten-1"> View Details</a>
+              <a href="#" class="btn waves-effect waves-light "> View Details</a>
             </div>
           </div>
         </div>

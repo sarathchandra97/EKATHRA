@@ -45,8 +45,8 @@ class PagesController extends Controller
         return view('pages.workshops');
     }
 
-    public function vivaan2016()
+    public function culturals()
     {
-        return view('pages.vivaan2016');
+        return view('pages.culturals');
     }
 }

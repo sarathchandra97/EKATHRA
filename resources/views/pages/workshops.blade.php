@@ -16,7 +16,7 @@
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light teal lighten-1"> View Details</a>
+              <a href="#" class="btn waves-effect waves-light "> View Details</a>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light teal lighten-1"> View Details</a>
+              <a href="#" class="btn waves-effect waves-light "> View Details</a>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light teal lighten-1"> View Details</a>
+              <a href="#" class="btn waves-effect waves-light "> View Details</a>
             </div>
           </div>
         </div>

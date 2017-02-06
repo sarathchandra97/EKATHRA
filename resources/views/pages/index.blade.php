@@ -7,12 +7,12 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center white-text text-lighten-2">Vivaan 2017</h1>
+        <h2 class="header center white-text">EKATHRA</h2>
         <div class="row center">
-          <a href="{{ url('events') }}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Check Events</a>
+          <a href="{{ url('events') }}" id="download-button" class="btn-large waves-effect waves-light ">Check Events</a>
         </div>
         <div class="row center">
-          <h4 class="header col s12 light">Law of mechanical repair: After your hands become coated with grease, your nose will begin to itch</h4>
+          <h5 class="header col s12 light">Law of mechanical repair: After your hands become coated with grease, your nose will begin to itch</h5>
         </div>
         <br><br>
       </div>
@@ -61,8 +61,8 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <a href="{{ url('workshops') }}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">See Workshops</a>
-          <h4 class="header col s12 light">No TECH without MECH</h4>
+          <a href="{{ url('workshops') }}" id="download-button" class="btn-large waves-effect waves-light ">See Workshops</a>
+          <h5 class="header col s12 light">No TECH without MECH</h5>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>About Vivaan</h4>
+          <h5>About Vivaan</h5>
           <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
       </div>
@@ -88,7 +88,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h4 class="header col s12 light">We crank up the lives, We shift up the gears, Beware of us, bcoz we are the “Mechanical Engineers”</h4>
+          <h5 class="header col s12 light">We crank up the lives, We shift up the gears, Beware of us, bcoz we are the “Mechanical Engineers”</h5>
         </div>
       </div>
     </div>
