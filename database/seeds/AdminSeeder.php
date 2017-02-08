@@ -13,8 +13,8 @@ class AdminSeeder extends Seeder
     public function run()
     {
         $credentials = [
-		    'email'    => 'admin@vivaan2017.com',
-		    'password' => 'vivaan2017',
+		    'email'    => 'admin@ekathra.com',
+		    'password' => 'ekathra2017',
 		];
 
         $user = Sentinel::registerAndActivate($credentials);

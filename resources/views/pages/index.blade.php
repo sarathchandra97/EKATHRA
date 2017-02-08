@@ -1,97 +1,87 @@
-@extends('layouts.app')
+<!Doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <title>EKATHRA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url('css/materialize.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{url('css/home.min.css')}}">
+</head>
+<body>
+<header>
+  <nav class="transparent" role="navigation">
+    <div class="nav-wrapper container">
+      <span> </span>
+      <a id="logo-container" href="{{ url('/') }}" class="brand-logo">EKATHRA</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url('events') }}">Events</a></li>
+        <li><a href="{{ url('workshops') }}">Workshops</a></li>
+        <li><a href="{{ url('culturals') }}">Culturals</a></li>
+        <li><a href="{{ url('about') }}">About</a></li>
+        
+        @if(Sentinel::guest())
+          <li><a href="{{ url('contactus') }}">Contact Us</a></li>
+          <li><a href="{{ url('register') }}">Register</a></li>
+          <li><a href="{{ url('sign-in') }}">Login</a></li>
+        @else
+          <li><a href="{{ url('events-registered') }}">Events Registered</a></li>
+          <li><a href="{{ url('profile') }}">Profile</a></li>
+          <li><a href="{{ url('sign-out') }}">SignOut</a></li>
+        @endif
+      </ul>
 
-@section('title','Home')
-
-@section('content')
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h2 class="header center white-text">EKATHRA</h2>
-        <div class="row center">
-          <a href="{{ url('events') }}" id="download-button" class="btn-large waves-effect waves-light ">Check Events</a>
-        </div>
-        <div class="row center">
-          <h5 class="header col s12 light">Law of mechanical repair: After your hands become coated with grease, your nose will begin to itch</h5>
-        </div>
-        <br><br>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="{{ url('events') }}">Events</a></li>
+        <li><a href="{{ url('workshops') }}">Workshops</a></li>
+        <li><a href="{{ url('culturals') }}">Culturals</a></li>
+        <li><a href="{{ url('about') }}">About</a></li>
+        <li><a href="">Sponsors</a></li>
+        @if(Sentinel::guest())
+          <li><a href="{{ url('contactus') }}">Contact Us</a></li>
+          <li><a href="{{ url('register') }}">Register</a></li>
+          <li><a href="{{ url('sign-in') }}">Login</a></li>
+        @else
+          <li><a href="{{ url('events-registered') }}">Events Registered</a></li>
+          <li><a href="{{ url('profile') }}">Profile</a></li>
+          <li><a href="{{ url('sign-out') }}">SignOut</a></li>
+        @endif
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
+    </div>
+  </nav>
+</header>
+<main>
+  <div id="particles">
+    <div id="intro">
+      <h1 class="white-text">EKATHRA</h1>
+      <p>fusion of technology and culture</p>
+    </div>  
+  </div>  
+</main>
+<footer class="page-footer transparent">
+  <div class="container transparent">
+    <div class="row">
+      <div class="col l12 s12">
+        <ul class="right">
+          <li><a href="{{ url('about') }}" class="white-text">About</a></li>
+          <li><a href="{{ url('contactus') }}" class="white-text">ContactUs</a></li>
+          <li><a href="" class="white-text">Sponsors</a></li>
+        </ul>
       </div>
     </div>
-    <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
-
-
-  <div class="container">
-    <div class="section">
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">clear_all</i></h2>
-            <h5 class="center">Events</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Workshops</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">dashboard</i></h2>
-            <h5 class="center">Something else</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
+  <div class="footer-copyright transparent">
+    <div class="container center">
+      &copy 2017, developed by Srikar Yaganti
     </div>
   </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <a href="{{ url('workshops') }}" id="download-button" class="btn-large waves-effect waves-light ">See Workshops</a>
-          <h5 class="header col s12 light">No TECH without MECH</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h5>About Vivaan</h5>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">We crank up the lives, We shift up the gears, Beware of us, bcoz we are the “Mechanical Engineers”</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-@endsection
+</footer>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script type='text/javascript' src='{{url('js/jquery.particleground.js')}}'></script>
+  <script type='text/javascript' src='{{url('js/demo.js')}}'></script>  
+</body>
+</html>

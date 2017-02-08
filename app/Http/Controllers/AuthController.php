@@ -76,11 +76,11 @@ class AuthController extends Controller
         $role = Sentinel::findRoleBySlug('user');
         $user->roles()->attach($role);
 
-        //Mail::to($user)->send(new NewUser());
+        Mail::to($user)->send(new NewUser());
         
         Sentinel::login($user);
         
-        Session::flash('success','Registration successful.Welcome to Vivaan 2017');
+        Session::flash('success','Registration successful.Welcome to EKATHRA 2017');
 
         return redirect('profile');
     }

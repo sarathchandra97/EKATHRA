@@ -17,7 +17,7 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255|',
-            'mobile' => 'required|max:10|min:10|digits:10',
+            'mobile' => 'required|digits:10',
         ]);
         if($request->accommodation != '')
         {
@@ -78,8 +78,9 @@ class DashboardController extends Controller
     public function createTeam(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:255',
-            'event' => 'required|max:255',
+            'name' => 'required|max:255|unique:teams,name',
         ]);
+        
+
     }	
 }

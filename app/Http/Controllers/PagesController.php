@@ -48,5 +48,10 @@ class PagesController extends Controller
     public function culturals()
     {
         return view('pages.culturals');
+    } 
+
+    public function sponsors()
+    {
+        return view('pages.sponsors');
     }
 }

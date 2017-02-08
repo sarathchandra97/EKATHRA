@@ -25,24 +25,34 @@ class PasswordController extends Controller
 
     public function postReset(Request $request,$code)
     {
-    	$this->validate($request,[
+        $this->validate($request,[
     			'password' => 'required|max:255|confirmed'
-    		]);
+		]);
         
         $user = Sentinel::findUserByCredentials(['email' => $request->email]);
-    	$password = $request->password;
-
-		if ($reminder = Reminder::complete($user, $code,$password))
+        $password = $request->password;
+        if ($reminder = Reminder::complete($user, $code,$password))
 		{
-			// Reminder was successful
-			Session::flash('message', 'Password Reset Successful');
-            
+            // Reminder was successful
+            $credentials = [
+                'password' => $request->password,
+            ];
+            $user = Sentinel::update($user, $credentials);
+			
+			//Login
+            $credentials = [
+                'email' => $request->email,
+                'password' => $request->password,
+            ];
+
             //removing old reminders
+            $remember = false;
+
             Reminder::removeExpired();
             
-        	return redirect('/');
-		
-		}
+            if (Sentinel::authenticate($credentials,$remember))
+                return redirect('profile')->with('success','Welcome back!');
+        }
 		else
 		{
 			// Reminder not found or not completed.
@@ -77,10 +87,7 @@ class PasswordController extends Controller
             $code = $reminder->code;
             Mail::to($user)->send(new ForgotPassword($code));
         }
-
-        $message = 'An Email has been sent to your Email address';
-        Session::flash('message', $message);
-        return redirect('/'); 
+        return redirect('sign-in')->with('success','An Email has been sent to your Email address'); 
 
     }
 

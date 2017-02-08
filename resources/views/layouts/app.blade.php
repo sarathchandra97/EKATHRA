@@ -6,7 +6,7 @@
   <title>@yield('title') | EKATHRA</title>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="{{ url('css/materialize.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ elixir('css/style.css') }}">
 </head>
 <body>
@@ -16,37 +16,37 @@
       <span> </span>
       <a id="logo-container" href="{{ url('/') }}" class="brand-logo">EKATHRA</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{{ url('events') }}">Events</a></li>
-        <li><a href="{{ url('workshops') }}">Workshops</a></li>
-        <li><a href="{{ url('culturals') }}">Culturals</a></li>
+        <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
+        <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
+        <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>
         @if(Sentinel::guest())
-          <li><a href="{{ url('about') }}">About</a></li>
-          <li><a href="{{ url('contactus') }}">Contact Us</a></li>
-          <li><a href="{{ url('register') }}">Register</a></li>
-          <li><a href="{{ url('sign-in') }}">Login</a></li>
+          <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
+          <li><a href="{{ url('contactus') }}" {!! Request::is('contactus') ? 'class="active"' : '' !!}>Contact Us</a></li>
+          <li><a href="{{ url('register') }}" {!! Request::is('register') ? 'class="active"' : '' !!}>Register</a></li>
+          <li><a href="{{ url('sign-in') }}" {!! Request::is('sign-in') ? 'class="active"' : '' !!}>Login</a></li>
         @else
-          <li><a href="{{ url('events-registered') }}">Events Registered</a></li>
-          <li><a href="{{ url('profile') }}">Profile</a></li>
-          <li><a href="{{ url('sign-out') }}">SignOut</a></li>
+          <li><a href="{{ url('events-registered') }}" {!! Request::is('events-registered') ? 'class="active"' : '' !!}>Events Registered</a></li>
+          <li><a href="{{ url('profile') }}" {!! Request::is('profile') ? 'class="active"' : '' !!}>Profile</a></li>
+          <li><a href="{{ url('sign-out') }}" {!! Request::is('sign-out') ? 'class="active"' : '' !!}>SignOut</a></li>
         @endif
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="{{ url('events') }}">Events</a></li>
-        <li><a href="{{ url('workshops') }}">Workshops</a></li>
-        <li><a href="{{ url('culturals') }}">Culturals</a></li>
+        <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
+        <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
+        <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>
         @if(Sentinel::guest())
-          <li><a href="{{ url('about') }}">About</a></li>
-          <li><a href="{{ url('contactus') }}">Contact Us</a></li>
-          <li><a href="{{ url('register') }}">Register</a></li>
-          <li><a href="{{ url('sign-in') }}">Login</a></li>
+          <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
+          <li><a href="{{ url('contactus') }}" {!! Request::is('contactus') ? 'class="active"' : '' !!}>Contact Us</a></li>
+          <li><a href="{{ url('register') }}" {!! Request::is('register') ? 'class="active"' : '' !!}>Register</a></li>
+          <li><a href="{{ url('sign-in') }}" {!! Request::is('sign-in') ? 'class="active"' : '' !!}>Login</a></li>
         @else
-          <li><a href="{{ url('events-registered') }}">Events Registered</a></li>
-          <li><a href="{{ url('profile') }}">Profile</a></li>
-          <li><a href="{{ url('sign-out') }}">SignOut</a></li>
+          <li><a href="{{ url('events-registered') }}" {!! Request::is('events-registered') ? 'class="active"' : '' !!}>Events Registered</a></li>
+          <li><a href="{{ url('profile') }}" {!! Request::is('profile') ? 'class="active"' : '' !!}>Profile</a></li>
+          <li><a href="{{ url('sign-out') }}" {!! Request::is('sign-out') ? 'class="active"' : '' !!}>SignOut</a></li>
         @endif
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons black-text">menu</i></a>
     </div>
   </nav>
   </header>
@@ -69,7 +69,7 @@
     </div>
     <div class="footer-copyright light-blue darken-4">
       <div align="center" class="container">
-        &copy 2017, developed by Srikar Yaganti
+        &copy {{date('Y')}}, developed by Srikar Yaganti
       </div>
     </div>
   </footer>
@@ -79,7 +79,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
-  <script src="js/init.js"></script>
+  <script src="{{url('js/init.js')}}"></script>
   @yield('scripts')
   
   </body>

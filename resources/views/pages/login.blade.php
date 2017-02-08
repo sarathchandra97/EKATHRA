@@ -6,7 +6,7 @@
 <div class="container">
   <div class="section">
     <div class="row">
-      <div class="col s12 l6 offset-l3">
+      <div class="col s12 l6 offset-l3"> 
         <div class="card z-depth-5">
           <div class="row">
             <br><br><br>
@@ -24,7 +24,7 @@
               <div class="row">
                   <div class="input-field col s10 l10 offset-s1 offset-l1">
                     <i class="material-icons prefix">lock_outline</i>
-                    <input id="password" type="password" class="validate" required name="password">
+                    <input id="password" type="password" required name="password">
                     <label for="password">Password</label>
                   </div>
               </div>
