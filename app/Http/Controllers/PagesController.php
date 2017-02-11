@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
+use DB;
 
 class PagesController extends Controller
 {
@@ -35,6 +36,12 @@ class PagesController extends Controller
         return view('pages.events');
     }
 
+    public function festevents($fest)
+    {
+        $events = DB::table('items')->where([['fest', '=', $fest],['category', '=', 'event']])->get();
+        return view('events.events')->with('events',$events);
+    }
+
     public function event($slug)
     {
         return $slug;
@@ -47,7 +54,9 @@ class PagesController extends Controller
 
     public function culturals()
     {
-        return view('pages.culturals');
+        $culturals = DB::table('items')->where('category', '=', 'culturals')->get();
+        
+        return view('pages.culturals')->with('culturals',$culturals);
     } 
 
     public function sponsors()

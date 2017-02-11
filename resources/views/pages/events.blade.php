@@ -8,93 +8,59 @@
         <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="{{url('img/background1.jpg')}}">
-              <span class="card-title">CSE/IT</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <a href="{{url('vivaan/events')}}"><img src="{{url('img/departments/background1.jpg')}}"></a>
+              <span class="card-title">Vivaan (Mechanical)</span>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light "> View Details</a>
+              <a href="{{url('vivaan/events')}}" class="btn waves-effect waves-light "> View Events</a>
             </div>
           </div>
         </div>
         <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="{{url('img/background1.jpg')}}">
-              <span class="card-title">EEE</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <a href="{{url('nirmaan/events')}}"><img src="{{url('img/departments/background1.jpg')}}"></a>
+              <span class="card-title">Nirmaan (Civil)</span>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light "> View Details</a>
+              <a href="{{url('nirmaan/events')}}" class="btn waves-effect waves-light "> View Events</a>
             </div>
           </div>
         </div>
         <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="{{url('img/background1.jpg')}}">
-              <span class="card-title">Mechanical</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <a href="{{url('devops/events')}}"><img src="{{url('img/departments/background1.jpg')}}"></a>
+              <span class="card-title">Devops (CSE/IT)</span>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light "> View Details</a>
+              <a href="{{url('devops/events')}}" class="btn waves-effect waves-light "> View Events</a>
             </div>
           </div>
         </div>
         <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="{{url('img/background1.jpg')}}">
-              <span class="card-title">Civil</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <a href="{{url('chemisphere/events')}}"><img src="{{url('img/departments/background1.jpg')}}"></a>
+              <span class="card-title">Chemisphere (Chemical)</span>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light "> View Details</a>
+              <a href="{{url('chemisphere/events')}}" class="btn waves-effect waves-light "> View Events</a>
             </div>
           </div>
         </div>
         <div class="col s12 m6 l4">
           <div class="card">
             <div class="card-image">
-              <img src="{{url('img/background1.jpg')}}">
-              <span class="card-title">Chemical</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <a href="{{url('esayoga/events')}}"><img src="{{url('img/departments/background1.jpg')}}"></a>
+              <span class="card-title">E-Sayoga (ECE)</span>
             </div>
             <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light "> View Details</a>
+              <a href="{{url('esayoga/events')}}" class="btn waves-effect waves-light "> View Events</a>
             </div>
           </div>
         </div>
-        <div class="col s12 m6 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="{{url('img/background1.jpg')}}">
-              <span class="card-title">ECE</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#" class="btn waves-effect waves-light "> View Details</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        
+    </div>
 </div>
 @endsection

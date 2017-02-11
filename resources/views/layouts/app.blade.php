@@ -10,8 +10,8 @@
   <link rel="stylesheet" type="text/css" href="{{ elixir('css/style.css') }}">
 </head>
 <body>
-  <header>
-  <nav class="white" role="navigation">
+  <header
+>  <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <span> </span>
       <a id="logo-container" href="{{ url('/') }}" class="brand-logo">EKATHRA</a>
@@ -19,9 +19,8 @@
         <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
         <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
         <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>
+        <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
         @if(Sentinel::guest())
-          <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
-          <li><a href="{{ url('contactus') }}" {!! Request::is('contactus') ? 'class="active"' : '' !!}>Contact Us</a></li>
           <li><a href="{{ url('register') }}" {!! Request::is('register') ? 'class="active"' : '' !!}>Register</a></li>
           <li><a href="{{ url('sign-in') }}" {!! Request::is('sign-in') ? 'class="active"' : '' !!}>Login</a></li>
         @else
@@ -35,8 +34,8 @@
         <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
         <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
         <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>
+        <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
         @if(Sentinel::guest())
-          <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
           <li><a href="{{ url('contactus') }}" {!! Request::is('contactus') ? 'class="active"' : '' !!}>Contact Us</a></li>
           <li><a href="{{ url('register') }}" {!! Request::is('register') ? 'class="active"' : '' !!}>Register</a></li>
           <li><a href="{{ url('sign-in') }}" {!! Request::is('sign-in') ? 'class="active"' : '' !!}>Login</a></li>
@@ -63,6 +62,7 @@
           <ul>
           <li class="col s3 l1 offset-l9"><a href="{{ url('about') }}" class="white-text">About</a></li>
           <li class="col s3 l1"><a href="{{ url('contactus') }}" class="white-text">ContactUs</a></li>
+          <li class="col s3 l1"><a href="{{ url('sponsors') }}" class="white-text">Sponsors</a></li>
         </ul>
         </div>
       </div>

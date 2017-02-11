@@ -17,15 +17,15 @@ class CreateTeamsTable extends Migration
             $table->increments('id');
             
             $table->string('name')->unique();
-            $table->string('member1');
-            $table->string('member2');
-            $table->string('member3');
-            $table->string('member4');
-            $table->string('member5');
-            $table->string('member6');
-            $table->string('member7');
-            $table->string('member8');
-            $table->int('count')->default(0);
+            $table->integer('member1');
+            $table->integer('member2');
+            $table->integer('member3');
+            $table->integer('member4');
+            $table->integer('member5');
+            $table->integer('member6');
+            $table->integer('member7');
+            $table->integer('member8');
+            $table->integer('count')->default(0);
 
             $table->engine = 'InnoDB';
         });

@@ -13,7 +13,7 @@ class AdminSeeder extends Seeder
     public function run()
     {
         $credentials = [
-		    'email'    => 'admin@ekathra.com',
+		    'email'    => 'admin@ekathra.in',
 		    'password' => 'ekathra2017',
 		];
 

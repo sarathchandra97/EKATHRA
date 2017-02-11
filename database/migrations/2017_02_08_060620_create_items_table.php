@@ -15,6 +15,8 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->string('slug')->unique();
             //Can be event,workshop,culturals
             $table->string('category');
             //Can be cultural/fest names
@@ -23,6 +25,7 @@ class CreateItemsTable extends Migration
             $table->string('department');
             //event name
             $table->string('name');
+            $table->integer('count');
 
             $table->string('intro');
             $table->text('description');

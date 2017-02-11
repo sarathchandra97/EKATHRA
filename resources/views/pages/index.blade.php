@@ -7,7 +7,7 @@
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="{{ url('css/materialize.min.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{url('css/home.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url('css/home.css')}}">
 </head>
 <body>
 <header>
@@ -20,9 +20,7 @@
         <li><a href="{{ url('workshops') }}">Workshops</a></li>
         <li><a href="{{ url('culturals') }}">Culturals</a></li>
         <li><a href="{{ url('about') }}">About</a></li>
-        
         @if(Sentinel::guest())
-          <li><a href="{{ url('contactus') }}">Contact Us</a></li>
           <li><a href="{{ url('register') }}">Register</a></li>
           <li><a href="{{ url('sign-in') }}">Login</a></li>
         @else
@@ -61,17 +59,14 @@
   </div>  
 </main>
 <footer class="page-footer transparent">
-  <div class="container transparent">
-    <div class="row">
-      <div class="col l12 s12">
-        <ul class="right">
-          <li><a href="{{ url('about') }}" class="white-text">About</a></li>
-          <li><a href="{{ url('contactus') }}" class="white-text">ContactUs</a></li>
-          <li><a href="" class="white-text">Sponsors</a></li>
-        </ul>
-      </div>
+  <nav class="transparent" role="navigation">
+    <div class="nav-wrapper container">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url('contactus') }}">Contact Us</a></li>
+        <li><a href="{{ url('sponsors') }}">Sponsors</a></li>
+      </ul>
     </div>
-  </div>
+  </nav>
   <div class="footer-copyright transparent">
     <div class="container center">
       &copy 2017, developed by Srikar Yaganti

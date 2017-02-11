@@ -22,7 +22,8 @@ Route::get('culturals', 'PagesController@culturals');
 Route::get('event/{slug}', 'PagesController@event');
 Route::get('2016', 'PagesController@vivaan2016');
 Route::get('sign-out', 'AuthController@logout');
-
+//events pages
+Route::get('{fest}/events', 'PagesController@festevents');
 
 
 Route::group(['middleware' => 'guest'], function() {

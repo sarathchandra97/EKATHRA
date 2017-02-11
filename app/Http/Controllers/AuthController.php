@@ -76,7 +76,7 @@ class AuthController extends Controller
         $role = Sentinel::findRoleBySlug('user');
         $user->roles()->attach($role);
 
-        Mail::to($user)->send(new NewUser());
+        Mail::queue($user)->send(new NewUser());
         
         Sentinel::login($user);
         
