@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Sentinel;
+use App\Team;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -71,8 +73,17 @@ class DashboardController extends Controller
     }
 
     public function events()
-    {
-    	return view('dashboards.events');
+    {   
+        $email = Sentinel::check()->email;
+        $teams = Team::where('member1', '=', $email)
+        ->orWhere('member2', '=', $email)
+        ->orWhere('member3', '=', $email)
+        ->orWhere('member4', '=', $email)
+        ->orWhere('member5', '=', $email)
+        ->orWhere('member6', '=', $email)
+        ->orWhere('member7', '=', $email)
+        ->orWhere('member8', '=', $email)->get();
+    	return view('dashboards.events')->with('teams',$teams);
     }
 
     public function createTeam(Request $request)
@@ -80,7 +91,40 @@ class DashboardController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255|unique:teams,name',
         ]);
-        
 
+        $team = new Team;
+
+        $team->name = $request->name;
+        $team->member1 = Sentinel::check()->email;
+        $team->count = 1;
+        $team->save();
+
+        return redirect('events-registered');
     }	
+
+    public function deleteTeam($team)
+    {
+        DB::table('teams')->where('name', '=', $team)->delete();
+        return redirect('events-registered');
+    }
+    
+    public function leaveTeam($team)
+    {
+        //remove the user from team.
+        
+    }
+
+    public function addmember(Request $request)
+    {
+        $this->validate($request, [
+            'team' => 'required',
+            'uid' => 'required|max:32|exists:users,hash',
+        ]);
+        
+        $user = DB::table('users')->where('hash', '=', $request->uid)->first();
+        $team = DB::table('teams')->where('name', '=', $request->team)->first();
+        
+        DB::table('teams')->where('name', '=', $team->name)->update(['member'.($team->count + 1) => $user->email,'count' => ($team->count+1)]);
+        return redirect('events-registered');
+     }   
 }

@@ -11,7 +11,7 @@
           <div class="row">
             <br><br><br>
             <div class="row center">
-                    <h4>Log in | Ekathra</h4>
+                    <h4>Log in</h4>
             </div>
             <form method="POST" action="{{ url('sign-in') }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">

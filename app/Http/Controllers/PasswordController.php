@@ -85,7 +85,7 @@ class PasswordController extends Controller
 
             // Send the email
             $code = $reminder->code;
-            Mail::queue($user)->send(new ForgotPassword($code));
+            Mail::to($user)->send(new ForgotPassword($code));
         }
         return redirect('sign-in')->with('success','An Email has been sent to your Email address'); 
 

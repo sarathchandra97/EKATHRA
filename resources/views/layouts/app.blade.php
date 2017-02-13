@@ -10,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="{{ elixir('css/style.css') }}">
 </head>
 <body>
-  <header
->  <nav class="white" role="navigation">
+  <header>
+  <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <span> </span>
+      <span></span>
       <a id="logo-container" href="{{ url('/') }}" class="brand-logo">EKATHRA</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
@@ -31,6 +31,7 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
+        <li><a href="{{ url('/') }}" {!! Request::is('/') ? 'class="active"' : '' !!}>Home</a></li>
         <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
         <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
         <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>

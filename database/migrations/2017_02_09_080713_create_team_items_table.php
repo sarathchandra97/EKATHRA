@@ -16,7 +16,7 @@ class CreateTeamItemsTable extends Migration
         Schema::create('team_item', function (Blueprint $table) {
             $table->integer('team_id')->unsigned();
             $table->integer('item_id')->unsigned();
-            
+            $table->timestamps();
             $table->foreign('team_id')->references('id')->on('teams')
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('item_id')->references('id')->on('items')

@@ -33,7 +33,7 @@ class CreateItemsTable extends Migration
             $table->string('contact');
             
             $table->string('image');
-
+            $table->timestamps();
             $table->engine = 'InnoDB';
         });
     }

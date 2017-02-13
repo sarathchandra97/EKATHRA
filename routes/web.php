@@ -44,6 +44,9 @@ Route::group(['middleware' => 'guest'], function() {
 });
 
 
+Route::get('updateprofile', 'PagesController@bad');
+Route::get('updatepassword', 'PagesController@bad');
+Route::get('create-team', 'PagesController@bad');
 
 Route::group(['middleware' => 'user'], function() {
 
@@ -52,6 +55,12 @@ Route::group(['middleware' => 'user'], function() {
 	Route::post('updatepassword', 'DashboardController@updatePassword');
 	Route::get('events-registered', 'DashboardController@events');
 	Route::post('create-team', 'DashboardController@createTeam');
+	Route::post('delete/{team}', 'DashboardController@deleteTeam');
+	
+	Route::post('leave/{team}', 'DashboardController@leaveTeam');
+
+	Route::post('addmember', 'DashboardController@addmember');
+	Route::post('removemember', 'DashboardController@removemember');
 
 });
 

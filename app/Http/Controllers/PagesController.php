@@ -29,6 +29,12 @@ class PagesController extends Controller
             'email' => 'required|max:255',
             'message' => 'required|max:65535',
         ]);
+
+        DB::table('contactus')->insert(
+            ['name' => $request->name, 'email' => $request->email, 'message' => $request->message]
+        );
+
+        return redirect('contactus')->with('success','We will get back to you soon.');
     }
 
     public function events()
@@ -62,5 +68,10 @@ class PagesController extends Controller
     public function sponsors()
     {
         return view('pages.sponsors');
+    }
+
+    public function bad()
+    {
+        return redirect('/');
     }
 }

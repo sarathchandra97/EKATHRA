@@ -33,6 +33,15 @@
                     <div class="row">
                         <div class="col s12 l8 offset-l2">
                             <div class="form-group">
+                                <p>Department</p>
+                                <p>{{ $user->department }}</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 l8 offset-l2">
+                            <div class="form-group">
                                 <p>Mobile Number</p>
                                 <p class="form-control">{{ $user->mobile }}</p>
                                 <hr>

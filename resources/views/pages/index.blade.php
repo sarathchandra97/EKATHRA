@@ -13,40 +13,40 @@
 <header>
   <nav class="transparent" role="navigation">
     <div class="nav-wrapper container">
-      <span> </span>
+      <span></span>
       <a id="logo-container" href="{{ url('/') }}" class="brand-logo">EKATHRA</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{{ url('events') }}">Events</a></li>
-        <li><a href="{{ url('workshops') }}">Workshops</a></li>
-        <li><a href="{{ url('culturals') }}">Culturals</a></li>
-        <li><a href="{{ url('about') }}">About</a></li>
+        <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
+        <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
+        <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>
+        <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
         @if(Sentinel::guest())
-          <li><a href="{{ url('register') }}">Register</a></li>
-          <li><a href="{{ url('sign-in') }}">Login</a></li>
+          <li><a href="{{ url('register') }}" {!! Request::is('register') ? 'class="active"' : '' !!}>Register</a></li>
+          <li><a href="{{ url('sign-in') }}" {!! Request::is('sign-in') ? 'class="active"' : '' !!}>Login</a></li>
         @else
-          <li><a href="{{ url('events-registered') }}">Events Registered</a></li>
-          <li><a href="{{ url('profile') }}">Profile</a></li>
-          <li><a href="{{ url('sign-out') }}">SignOut</a></li>
+          <li><a href="{{ url('events-registered') }}" {!! Request::is('events-registered') ? 'class="active"' : '' !!}>Events Registered</a></li>
+          <li><a href="{{ url('profile') }}" {!! Request::is('profile') ? 'class="active"' : '' !!}>Profile</a></li>
+          <li><a href="{{ url('sign-out') }}" {!! Request::is('sign-out') ? 'class="active"' : '' !!}>SignOut</a></li>
         @endif
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="{{ url('events') }}">Events</a></li>
-        <li><a href="{{ url('workshops') }}">Workshops</a></li>
-        <li><a href="{{ url('culturals') }}">Culturals</a></li>
-        <li><a href="{{ url('about') }}">About</a></li>
-        <li><a href="">Sponsors</a></li>
+        <li><a href="{{ url('/') }}" {!! Request::is('/') ? 'class="active"' : '' !!}>Home</a></li>
+        <li><a href="{{ url('events') }}" {!! Request::is('events') ? 'class="active"' : '' !!}>Events</a></li>
+        <li><a href="{{ url('workshops') }}" {!! Request::is('workshops') ? 'class="active"' : '' !!}>Workshops</a></li>
+        <li><a href="{{ url('culturals') }}" {!! Request::is('culturals') ? 'class="active"' : '' !!}>Culturals</a></li>
+        <li><a href="{{ url('about') }}" {!! Request::is('about') ? 'class="active"' : '' !!}>About</a></li>
         @if(Sentinel::guest())
-          <li><a href="{{ url('contactus') }}">Contact Us</a></li>
-          <li><a href="{{ url('register') }}">Register</a></li>
-          <li><a href="{{ url('sign-in') }}">Login</a></li>
+          <li><a href="{{ url('contactus') }}" {!! Request::is('contactus') ? 'class="active"' : '' !!}>Contact Us</a></li>
+          <li><a href="{{ url('register') }}" {!! Request::is('register') ? 'class="active"' : '' !!}>Register</a></li>
+          <li><a href="{{ url('sign-in') }}" {!! Request::is('sign-in') ? 'class="active"' : '' !!}>Login</a></li>
         @else
-          <li><a href="{{ url('events-registered') }}">Events Registered</a></li>
-          <li><a href="{{ url('profile') }}">Profile</a></li>
-          <li><a href="{{ url('sign-out') }}">SignOut</a></li>
+          <li><a href="{{ url('events-registered') }}" {!! Request::is('events-registered') ? 'class="active"' : '' !!}>Events Registered</a></li>
+          <li><a href="{{ url('profile') }}" {!! Request::is('profile') ? 'class="active"' : '' !!}>Profile</a></li>
+          <li><a href="{{ url('sign-out') }}" {!! Request::is('sign-out') ? 'class="active"' : '' !!}>SignOut</a></li>
         @endif
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons black-text">menu</i></a>
     </div>
   </nav>
 </header>
@@ -55,6 +55,7 @@
     <div id="intro">
       <h1 class="white-text">EKATHRA</h1>
       <p>fusion of technology and culture</p>
+      <p>March 8th - 10th</p>
     </div>  
   </div>  
 </main>
